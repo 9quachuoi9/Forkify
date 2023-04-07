@@ -703,7 +703,6 @@ const showRecipe = async function() {
     "hashchange",
     "load"
 ].forEach((ev)=>window.addEventListener(ev, showRecipe));
-console.log("Hello World");
 
 },{"core-js/modules/es.regexp.flags.js":"gSXXb","core-js/modules/web.immediate.js":"49tUX","url:../img/icons.svg":"loVOp","regenerator-runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gSXXb":[function(require,module,exports) {
 var global = require("1e91f8d9abc43864");
