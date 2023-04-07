@@ -1,8 +1,8 @@
-import icons from "url:../img/icons.svg";
-import "core-js/stable";
-import "regenerator-runtime";
+import icons from 'url:../img/icons.svg';
+import 'core-js/stable';
+import 'regenerator-runtime';
 
-const recipeContainer = document.querySelector(".recipe");
+const recipeContainer = document.querySelector('.recipe');
 
 const timeout = function (s) {
     return new Promise(function (_, reject) {
@@ -26,8 +26,8 @@ const renderSpinner = function () {
           </svg>
         </div>
     `;
-    recipeContainer.innerHTML = "";
-    recipeContainer.insertAdjacentHTML("afterbegin", markup);
+    recipeContainer.innerHTML = '';
+    recipeContainer.insertAdjacentHTML('afterbegin', markup);
 };
 
 const showRecipe = async function () {
@@ -128,7 +128,7 @@ const showRecipe = async function () {
           <h2 class="heading--2">Recipe ingredients</h2>
           <ul class="recipe__ingredient-list">
           ${ingredients
-              .map((ing) => {
+              .map(ing => {
                   return `
              <li class="recipe__ingredient">
                 <svg class="recipe__icon">
@@ -141,7 +141,7 @@ const showRecipe = async function () {
                 </div>
             </li> `;
               })
-              .join("")}
+              .join('')}
 
           </ul>
         </div>
@@ -167,13 +167,11 @@ const showRecipe = async function () {
           </a>
         </div>
         `;
-        recipeContainer.innerHTML = "";
-        recipeContainer.insertAdjacentHTML("afterbegin", markup);
+        recipeContainer.innerHTML = '';
+        recipeContainer.insertAdjacentHTML('afterbegin', markup);
     } catch (error) {
         alert(error);
     }
 };
 
-["hashchange", "load"].forEach((ev) => window.addEventListener(ev, showRecipe));
-
-console.log("Hello World");
+['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
